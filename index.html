@@ -1,0 +1,719 @@
+<!doctype html>
+<html>
+<!-- The following code has been developed by students and researchers of the Freshman Research Initiative DIY Diagnostics Stream 
+at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product.
+Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+	 
+THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
+	 
+Authors:
+Jenna Leigh Castañeda & Zahira Correa
+	 
+Further Information:
+http://cns.utexas.edu/fri
+	 
+Research Educator:
+Timothy Riedel
+triedel@utexas.edu
+	 
+Brief Description of Goal of Code:
+The purpose of this code is to bring awareness of the mental illnesseses that are depression and anxiety. Moreover, this app is also for Latino and Spanish speaking minorities who 
+might otherwise not be able to find resources appropiate for them. -->
+	
+
+<head>
+<title>Depression-to-discovery by diydiagnostics</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/themes/App1.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<meta name="apple-mobile-web-app-capable" content="yes">   
+	  	
+<script>
+var docMod = document.lastModified; // Updates last modified date and time of the index.html file
+alert("This file last modified  " + docMod); // displays last modified date and time in a popup alert window 
+</script>
+	 
+			
+<script>
+	var one_count = 0; 
+	var two_count = 0; 
+	var three_count = 0;
+	//var totalx = 0;
+	//var testTotalVal = 0;
+	var score = 0;	
+	var page12 = 0;
+		
+	function OneAdd(){
+		one_count++; 
+		}
+	function TwoAdd(){
+		two_count = two_count+2; 
+		}
+	function ThreeAdd(){
+		three_count = three_count+3; 
+		}
+		function openpage(){
+		page12 = 1;
+		}
+	//totalx = (one_count+two_count+three_count);
+	//testTotalVal = one_count + two_count + three_count;
+		
+	function phq9output(){
+		/*document.write(one_count);
+		document.write(two_count);
+		document.write(three_count);
+		document.write(one_count+two_count+three_count);*/
+		document.getElementById("results1").innerHTML = "Severity Index= " + (one_count+two_count+three_count); //Outputs results
+		}
+	</script>
+		
+	<style>
+	.container {
+	  position: relative;
+	  width: 100%;
+	  height: 100%;
+	}
+	
+	img {
+	   display: block;
+	   max-width: 100%;
+	   height: 100%;
+	   object-fit: cover;
+	}
+			
+	.overlay {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: 100%;
+	  width: 100%;
+	  opacity: 0;
+	  transition: .5s ease;
+	  background-color: #008CBA;
+	}
+	
+	.container:hover .overlay {
+	  opacity: 0.5;
+	  filter: alpha(opacity=50);
+	}
+	
+	.text {
+	  color: white;
+	  text-align: center;
+	  font-size: 45px;
+	}	
+		
+	h1 {
+	    color: #008CBA;
+	    text-align: center;
+	}
+	
+	p {
+	    font-family: arial;
+	    text-align:center;
+	    font-size: 20px;
+	}	
+		
+.button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+	}
+		
+	
+.navbar-nav{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 60px;
+  text-color: white;
+  background-color: #008CBA;
+}
+
+
+		
+</style>	
+</head>
+	 
+		
+</body>	 
+		
+		
+	<div data-role="page" id="pageone">
+	        <div data-role="header">
+		<h1>H.O.P.E. <center><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Serotonin-2D-skeletal.png" alt="Depression Awareness" style="width:70px;height:50px;"></center></h1>
+		</div><!-- /header -->
+	<div data-role="content">
+	     <p><font size="4.25">Welcome to H.O.P.E.! The purpose of this app is to act as a resource for those suffering from depression and inform the general public about depression. We hope this may be an accessible tool for you. </font></p>
+	        <a href="#page2" data-role="button">Patient Health Questionnaire</a>      
+		<a href="#page13" data-role="button">Useful Resources</a>
+		<a href="#page17" data-role="button">En Español</a>
+		<center><img src="https://img0.etsystatic.com/055/1/10640774/il_570xN.726639060_46w7.jpg" alt="Depression Awareness" style="width:297px;height:321px;"></center>
+	        <p><font size="1">The following code has been developed by students and researchers of the Freshman Research Initiative DIY Diagnostics Stream 
+		at The University of Texas at Austin. THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION. If this app has brought it to your attention that you may have depression, please seek medical attention.
+		Author:Jenna Leigh Castañeda and Zahira Correa
+		Research Educator:Timothy Riedel</font></p>
+			</div><!-- /content -->
+	<div data-role="footer" data-position="fixed">
+		</div><!-- /footer -->
+		</div><!-- /page -->   
+		
+		 
+	<div data-role="page" id="page2">
+		<div data-role="header">
+		<h1>Patient Health Questionnaire<h1>
+			</div><!-- /header -->
+	<div data-role="content">
+		<p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+		   <p>1. Little interest or pleasure in doing things</p>
+		<a href="#page3" data-role="button">Not at all</a> 
+		<a href="#page3" onclick="OneAdd();" data-role="button">Several days</a> 
+		<a href="#page3" onclick="TwoAdd();" data-role="button">More than half the days</a>
+		<a href="#page3" onclick="ThreeAdd();" data-role="button">Nearly every day</a>
+	  		 </div><!-- /content -->
+	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+	      </div><!-- /footer -->
+	        </div><!-- /page --> 
+	
+
+				
+	<div data-role="page" id="page3">
+		<div data-role="header">
+		<h1>Patient Health Questionnaire<h1>
+			</div><!-- /header -->	
+	<div data-role="content">
+	    <p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+	      <p>2. Feeling down, depressed, or hopeless</p>
+		<a href="#page4" data-role="button">Not at all</a> 
+		<a href="#page4" onclick="OneAdd();" data-role="button">Several days</a> 
+		<a href="#page4" onclick="TwoAdd();" data-role="button">More than half the days</a>
+		<a href="#page4" onclick="ThreeAdd();" data-role="button">Nearly every day</a>
+	  	    </div><!-- /content -->		
+	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!-- /footer -->
+		  </div><!-- /page --> 
+			
+				
+	<div data-role="page" id="page4">
+	     <div data-role="header">
+		<h1>Patient Health Questionnaire<h1>
+			</div><!-- /header -->	
+	   <div data-role="content">
+		<p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+		   <p>3. Trouble falling or staying asleep, or sleeping too much</p>
+		     <a href="#page5" data-role="button">Not at all</a> 
+		     <a href="#page5" onclick="OneAdd();" data-role="button">Several days</a> 
+		     <a href="#page5" onclick="TwoAdd();" data-role="button">More than half the days</a>
+		     <a href="#page5" onclick="ThreeAdd();" data-role="button">Nearly every day</a>
+	  		 </div><!-- /content -->	
+	   <div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!-- /footer -->
+			</div><!-- /page --> 	
+		
+			
+			
+	<div data-role="page" id="page5">
+		<div data-role="header">
+		<h1>Patient Mental Health Questionnaire<h1>
+			</div><!--/header-->
+	<div data-role="content">
+	       <p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+		  <p>4. Feeling tired or having little energy</p>
+		      <a href="#page6" data-role="button">Not at all</a> 
+		      <a href="#page6" onclick="OneAdd();" data-role="button">Several days</a> 
+		      <a href="#page6" onclick="TwoAdd();" data-role="button">More than half the days</a>
+		      <a href="#page6" onclick="ThreeAdd();" data-role="button">Nearly every day</a>
+			</div><!-- /content -->	
+	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!-- /footer -->
+			</div><!-- /page --> 	
+			
+			
+	<div data-role="page" id="page6">
+	<div data-role="header">
+	<h1>Patient Mental Health Questionnaire<h1>
+		</div><!-- /header -->	
+	   <div data-role="content">
+		<p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+		<p>5. Poor appetite or overeating</p>
+		    <a href="#page7" data-role="button">Not at all</a> 
+		    <a href="#page7" onclick="OneAdd();" data-role="button">Several days</a> 
+	            <a href="#page7" onclick="TwoAdd();" data-role="button">More than half the days</a>
+		    <a href="#page7" onclick="ThreeAdd();" data-role="button">Nearly every day</a>
+	  	</div><!-- /content -->	
+	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+	</div><!-- /footer -->
+		</div><!-- /page --> 	
+	
+
+			
+	<div data-role="page" id="page7">
+	<div data-role="header">
+	<h1>Patient Mental Health Questionnaire<h1>
+		</div><!-- /header -->	
+	   <div data-role="content">
+		<p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+		   <p>6. Feeling bad about yourself — or that you are a failure or have let yourself or your family down</p>
+		    <a href="#page8" data-role="button">Not at all</a> 
+		    <a href="#page8" onclick="OneAdd();" data-role="button">Several days</a> 
+	            <a href="#page8" onclick="TwoAdd();" data-role="button">More than half the days</a>
+		    <a href="#page8" onclick="ThreeAdd();" data-role="button">Nearly every day</a>
+	  	</div><!-- /content -->	
+	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+	</div><!-- /footer -->
+		</div><!-- /page --> 	
+	
+
+	<div data-role="page" id="page8">
+	<div data-role="header">
+	<h1>Patient Mental Health Questionnaire<h1>
+		</div><!-- /header -->	
+	   <div data-role="content">
+		<p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+	       <p>7. Trouble concentrating on things, such as reading the newspaper or watching television</p>		    
+		    <a href="#page9" data-role="button">Not at all</a> 
+		    <a href="#page9" onclick="OneAdd();" data-role="button">Several days</a> 
+	            <a href="#page9" onclick="TwoAdd();" data-role="button">More than half the days</a>
+		    <a href="#page9" onclick="ThreeAdd();" data-role="button">Nearly every day</a>
+	  	</div><!-- /content -->	
+	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+	</div><!-- /footer -->
+		</div><!-- /page --> 	
+			
+		
+	<div data-role="page" id="page9">
+	<div data-role="header">
+	<h1>Patient Mental Health Questionnaire<h1>
+		</div><!-- /header -->	
+	   <div data-role="content">
+		<p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+		   <p>8. Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual</p>		    <a href="#page10" data-role="button">Not at all</a> 
+		    <a href="#page10" onclick="OneAdd();" data-role="button">Several days</a> 
+	            <a href="#page10" onclick="TwoAdd();" data-role="button">More than half the days</a>
+		    <a href="#page10" onclick="ThreeAdd();" data-role="button">Nearly every day</a>
+	  	</div><!-- /content -->	
+	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+	</div><!-- /footer -->
+		</div><!-- /page --> 	
+				
+	<div data-role="page" id="page10">
+	<div data-role="header">
+	<h1>Patient Mental Health Questionnaire<h1>
+		</div><!-- /header -->	
+	   <div data-role="content">
+		<p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+		   <p>9. Thoughts that you would be better off dead or of hurting yourself in some way</p>		    <a href="#page11" data-role="button">Not at all</a> 
+		    <a href="#page11" onclick="OneAdd();" data-role="button">Several days</a> 
+	            <a href="#page11" onclick="TwoAdd();" data-role="button">More than half the days</a>
+		    <a href="#page11" onclick="ThreeAdd();" data-role="button">Nearly every day</a>
+	  	</div><!-- /content -->	
+	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+	</div><!-- /footer -->
+		</div><!-- /page --> 
+				
+			
+	<div data-role="page" id="page11">
+		<div data-role="header">
+		<h1>Patient Health Questionnaire<h1>
+			</div><!-- /header -->	
+	   	<div data-role="content">
+		<p>If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?</p>
+			<a href="#page12" data-role="button">Not dificult at all</a> 
+			<a href="#page12" data-role="button">Somewhat dificult</a> 
+			<a href="#page12" data-role="button">Very dificult</a> 
+			<a href="#page12" data-role="button">Extremely dificult</a> 
+	  		 </div><!-- /content -->	
+	<div data-role="footer" data-position="fixed">
+	<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!-- /footer -->
+			</div><!-- /page --> 
+			
+			
+			
+	<div data-role="page" id="page12"> 
+			<div data-role="header">
+			<h1>Patient Health Questionnaire</h1>
+			</div><!--/header-->'		
+	   <div data-role="content">	
+	   		<button onclick="phq9output();">Click here for Results</button>
+			<p id="results1"></p>
+			<p>Depression Severity: 0-4 NONE, 5-9 MILD, 10-14 MODERATE, 15-19 MODERATELY SEVERE, 20-27+ SEVERE</p>
+		   	<p id="one_count"></p>   
+			<a href="#page13" data-role="button">Useful Resources</a>
+	   			</div><!-- /content -->
+	  <div data-role="footer" data-position="fixed">
+	  <a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!-- /footer -->
+			</div><!-- /page -->
+			
+						   
+		<div data-role="page" id="page13">
+			<div data-role="header">
+			<h1>Useful Resources</h1>
+			</div><!-- /header -->
+	   	<div data-role="content">	
+			<a href="#page14" data-role="button">Suicide Prevention</a>
+			<a href="#page15" data-role="button">Natural Alternatives</a>
+			<a href="#page16" data-role="button">For College Students</a>
+	  		 </div><!-- /content -->
+	   	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+	  	</div><!-- /footer -->
+			</div><!-- /page -->  
+	
+
+						   
+	       <div data-role="page" id="page14">
+			<div data-role="header">
+			<h1>Suicide Prevention</h1>
+			</div><!-- /header -->
+		<div data-role="content">
+		<a href="https://projectsemicolon.com">Project Semicolon</a> 
+		<p>Project Semicolon works to provide those suffering from mental illness with suicidal thoughts to a caring community and a wider access to resources.</p>
+		<a href="https://suicidepreventionlifeline.org">National Suicide Prevention Lifeline</a> 
+		<p> This the National Suicide Prevention Lifeline website's. If you or a loved one you know are thinking about suicide, call at 1-800-273-8255. They are available 24 hours a day.</p>
+		       </div><!-- /content -->
+		  <div data-role="footer" data-position="fixed">
+			<a href="#pageone" data-role="button" data-icon="home">Home</a>
+			<a href="#page13" data-role="button">Additional Resources</a>
+		  </div><!-- /footer -->
+			</div><!-- /page --> 
+		
+	       <div data-role="page" id="page15">
+			<div data-role="header">
+			<h1>Natural Alternatives</h1>
+			</div><!-- /header -->    
+		<div data-role="content">	
+			</div><!-- /content -->     
+		  <div data-role="footer" data-position="fixed">
+		  <a href="#pageone" data-role="button" data-icon="home">Home</a>
+		  <a href="#page13" data-role="button">Resources</a>
+		  </div><!-- /footer -->
+			</div><!-- /page --> 
+		
+	       <div data-role="page" id="page16">
+		<div data-role="header">
+			<h1>College Students Resources</h1>
+			</div><!-- /header -->     
+		<div data-role="content">	
+			</div><!-- /content --> 
+		  <div data-role="footer" data-position="fixed">
+		  <a href="#pageone" data-role="button" data-icon="home">Home</a>
+		  <a href="#page13" data-role="button">Resources</a>
+		  </div><!-- /footer -->
+			</div><!-- /page -->  
+			      
+						      
+		<div data-role="page" id="page17">
+		<div data-role="header">
+		<h1>H.O.P.E. <center><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Serotonin-2D-skeletal.png" alt="Depression Awareness" style="width:70px;height:50px;"></center></h1>
+			</div><!-- /header -->
+	  	<div data-role="content">
+		<p><font size="5"> ¡Bienvenidos a H.O.P.E. (Esperanza)! El propósito de esta aplicación es ser un recurso para los que sufren de depresión e informar el público general sobre la depresión.</font></p>
+			<a href="#page18" data-role="button">Cuestionario Sobre la Salud del Paciente</a> <!-- Takes to Spanish questionnaire-->       
+			<a href="#page29" data-role="button">Recursos Adicionales</a>
+			<a href="#pageone" data-role="button">In English</a>
+		<p><font size="1">El siguiente código ha sido creado por estudiantes/investigadores del programa de Freshman Research Initiative DIY Diagnostics Stream en la Universidad de Texas en Austin. ESTE CÓDIGO NO DEBE DE SER USADO PARA DIAGNOSTICAR CUALQUIER TIPO DE CONDICIÓN MÉDICA. Si esta aplicación le ha dado a entender que pueda tener depresión, por favor busque atención médica.  
+		Autores:
+		Jenna Leigh Castañeda y Zahira Correa
+		Educador de Investigacion:
+		Timothy Riedel</font></p>
+			</div><!-- /content -->
+		<div data-role="footer" data-position="fixed">
+		</div><!-- /footer -->	
+			</div><!-- /page -->  
+	
+
+							     
+		<div data-role="page" id="page18">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+		<p>Durante las últimas 2 semanas, ¿qué tan seguido ha tenido molestias debido a los siguientes problemas?</p>
+			<p>1. Poco interés o placer en hacer cosas</p>
+			<a href="#page19" data-role="button">Ningún dia</a> 
+			<a href="#page19" onclick="OneAdd();" data-role="button">Varios días</a> 
+			<a href="#page19" onclick="TwoAdd();" data-role="button">Más de la mitad de los días</a>
+			<a href="#page19" onclick="ThreeAdd();" data-role="button">Casi todos los días</a>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->		
+					
+		<div data-role="page" id="page19">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+		<div data-role="content">
+	      	<p>Durante las últimas 2 semanas, ¿qué tan seguido ha tenido molestias debido a los siguientes problemas?</p>
+			<p>2. Se ha sentido decaído(a), deprimido(a) o sin esperanzas</p>
+			<a href="#page20" data-role="button">Ningún dia</a> 
+			<a href="#page20" onclick="OneAdd();" onclick="openpage();" data-role="button">Varios días</a> 
+			<a href="#page20" onclick="TwoAdd();" data-role="button">Más de la mitad de los días</a>
+			<a href="#page20" onclick="ThreeAdd();" data-role="button">Casi todos los días</a>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+			
+			
+		<div data-role="page" id="page20">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	      	<p>Durante las últimas 2 semanas, ¿qué tan seguido ha tenido molestias debido a los siguientes problemas?</p>
+			<p>3. Ha tenido dificultad para quedarse o permanecer dormido(a), o ha dormido demasiado</p>
+			<a href="#page21" data-role="button">Ningún dia</a> 
+			<a href="#page21" onclick="OneAdd();" onclick="openpage();" data-role="button">Varios días</a> 
+			<a href="#page21" onclick="TwoAdd();" data-role="button">Más de la mitad de los días</a>
+			<a href="#page21" onclick="ThreeAdd();" data-role="button">Casi todos los días</a>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+		
+				
+		<div data-role="page" id="page21">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	        <p>Durante las últimas 2 semanas, ¿qué tan seguido ha tenido molestias debido a los siguientes problemas?</p>
+			<p>4. Se ha sentido cansado(a) o con poca energía</p>
+			<a href="#page22" data-role="button">Ningún dia</a> 
+			<a href="#page22" onclick="OneAdd();" onclick="openpage();" data-role="button">Varios días</a> 
+			<a href="#page22" onclick="TwoAdd();" data-role="button">Más de la mitad de los días</a>
+			<a href="#page22" onclick="ThreeAdd();" data-role="button">Casi todos los días</a>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+			
+		
+		<div data-role="page" id="page22">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+		 <div data-role="content">
+	       <p>Durante las últimas 2 semanas, ¿qué tan seguido ha tenido molestias debido a los siguientes problemas?</p>
+			<p>5. Sin apetito o ha comido en exceso</p>
+			<a href="#page23" data-role="button">Ningún dia</a> 
+			<a href="#page23" onclick="OneAdd();" onclick="openpage();" data-role="button">Varios días</a> 
+			<a href="#page23" onclick="TwoAdd();" data-role="button">Más de la mitad de los días</a>
+			<a href="#page23" onclick="ThreeAdd();" data-role="button">Casi todos los días</a>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+			
+			
+		<div data-role="page" id="page23">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	     	<p>Durante las últimas 2 semanas, ¿qué tan seguido ha tenido molestias debido a los siguientes problemas?</p>
+			<p>6. Se ha sentido mal con usted mismo(a) – o que es un fracaso o que ha quedado mal con usted mismo(a) o con su familia</p>
+			<a href="#page24" data-role="button">Ningún dia</a> 
+			<a href="#page24" onclick="OneAdd();" onclick="openpage();" data-role="button">Varios días</a> 
+			<a href="#page24" onclick="TwoAdd();" data-role="button">Más de la mitad de los días</a>
+			<a href="#page24" onclick="ThreeAdd();" data-role="button">Casi todos los días.</a>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+			
+						   
+			<div data-role="page" id="page24">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	      <p>Durante las últimas 2 semanas, ¿qué tan seguido ha tenido molestias debido a los siguientes problemas?</p>
+			<p>7. Ha tenido dificultad para concentrarse en ciertas actividades, tales como leer el periódico o ver la televisión</p>
+			<a href="#page25" data-role="button">Ningún dia</a> 
+			<a href="#page25" onclick="OneAdd();" onclick="openpage();" data-role="button">Varios días</a> 
+			<a href="#page25" onclick="TwoAdd();" data-role="button">Más de la mitad de los días</a>
+			<a href="#page25" onclick="ThreeAdd();" data-role="button">Casi todos los días</a>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+				
+						   
+			<div data-role="page" id="page25">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	      <p>Durante las últimas 2 semanas, ¿qué tan seguido ha tenido molestias debido a los siguientes problemas?</p>
+			<p>8. ¿Se ha movido o hablado tan lento que otras personas podrían haberlo notado? o lo contrario – muy inquieto(a) o agitado(a) que ha estado moviéndose mucho más de lo normal</p>
+			<a href="#page26" data-role="button">Ningún dia</a> 
+			<a href="#page26" onclick="OneAdd();" onclick="openpage();" data-role="button">Varios días</a> 
+			<a href="#page26" onclick="TwoAdd();" data-role="button">Más de la mitad de los días</a>
+			<a href="#page26" onclick="ThreeAdd();" data-role="button">Casi todos los días</a>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+	
+
+			<div data-role="page" id="page26">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	      <p>Durante las últimas 2 semanas, ¿qué tan seguido ha tenido molestias debido a los siguientes problemas?</p>
+			<p>9. Pensamientos de que estaría mejor muerto(a) o de lastimarse de alguna manera</p>
+			<a href="#page27" data-role="button">Ningún dia</a> 
+			<a href="#page27" onclick="OneAdd();" onclick="openpage();" data-role="button">Varios días</a> 
+			<a href="#page27" onclick="TwoAdd();" data-role="button">Más de la mitad de los días</a>
+			<a href="#page27" onclick="ThreeAdd();" data-role="button">Casi todos los días</a>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+			
+			<div data-role="page" id="page27">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	      <p>Si marcó cualquiera de los problemas, ¿qué tanta dificultad le han dado estos problemas para hacer su trabajo, encargarse de las tareas del hogar, o llevarse bien con otras personas?</p>
+			<a href="#page28" data-role="button">No ha sido difícil</a> 
+			<a href="#page28" onclick="OneAdd();" onclick="openpage();" data-role="button">Un poco difícil</a> 
+			<a href="#page28" onclick="TwoAdd();" data-role="button">Muy difícil</a>
+			<a href="#page28" onclick="ThreeAdd();" data-role="button">Extremadamente difícil</a>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+			
+			<div data-role="page" id="page28">
+			<div data-role="header">
+			<h1>Cuestionario Sobre la Salud del Paciente</h1>
+			</div><!-- /header -->
+		<div data-role="content">    
+	   		<button onclick="phq9output();">Presione aqui para obtener resultados.</button>
+			<p id="results1"></p>
+			<p>Severidad de depresión: 0-4 NADA, 5-9 LEVE, 10-14 MODERADA, 15-19 MODERADAMENTE SEVERA, 20-27 SEVERA</p>
+		  	<p id="one_count"></p>   
+		<a href="#page30" data-role="button">Recursos Adicionales</a>
+	  		 </div><!-- /content -->
+	  	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!-- /footer -->
+			</div><!-- /page -->
+			
+			
+		<div data-role="page" id="page29">
+			<div data-role="header">
+			<h1>Recursos Adicionales</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+			<a href="#page30" data-role="button">Para mujeres</a> 
+			<a href="#page31" data-role="button">Para gente indigena</a> 
+			<a href="#page32" data-role="button">Para inmigrantes indocumentados</a>
+			<a href="#page33" data-role="button">Si tiene pensamientos suicidas</a>
+	   	</div><!-- /content -->
+	   	<div data-role="footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+			<a href="#page17" data-role="button">Inicio</a>
+	   	</div><!-- /footer -->
+			</div><!-- /page -->  
+	
+
+			
+		<div data-role="page" id="page30">
+			<div data-role="header">
+			<h1>Recursos para Mujeres</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	     	<p>Primer Recurso</p>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->		
+			
+			
+		<div data-role="page" id="page31">
+			<div data-role="header">
+			<h1>Recursos para genter indigena</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	     	<p>Primer recurso</p>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->
+			
+			
+		<div data-role="page" id="page32">
+			<div data-role="header">
+			<h1>Recursos Para Inmigrantes Indocumentados</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	     	<p>Por favor use </p>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+			
+			
+			<div data-role="page" id="page33">
+			<div data-role="header">
+			<h1>Si sufre de pensamientos suicidas</h1>
+			</div><!-- /header -->
+	 	<div data-role="content">
+	     	<p>Esta pagina continene diferentes recursos que tiene accesso a libremento de usar.</p>
+		<a> href="https://suicidepreventionlifeline.org/help-yourself/en-espanol/">Linea Telefonica: Prevencion de Suicidio</a>
+		<p> Llame al 1-888-628-9454 para ser dirigido a un centro de ayuda con profesionales dispuestos a ayudarle.</p>
+			</div><!-- /content-->
+		<div data-role = "footer" data-position="fixed">
+		<a href="#pageone" data-role="button" data-icon="home" >Home</a>
+		</div><!--/footer-->
+			</div><!--/page -->	
+					
+	  </body>
+	</html>
